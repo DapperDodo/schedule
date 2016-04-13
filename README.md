@@ -4,16 +4,22 @@
 
 Usage:
 
-go get -u github.com/DapperDodo/schedule
+	go get -u github.com/DapperDodo/schedule
 
 
 schedule examples:
 
-	// run DoIt() every night at 03:00
-	Run(EveryDay, OnHour, "03", DoIt)
+	// run hello() every 21st of the month
+	Run(EveryMonth, OnDay, "21", hello)
+
+	// run hello() every night at 03:00
+	Run(EveryDay, OnHour, "03", hello)
+
+	// run hello() every hour, at 15 minutes before the top of the hour
+	Run(EveryHour, OnMinute, "45", hello)
 	
-	// run DoIt() every minute, 30 seconds into the minute
-	Run(EveryMinute, OnSecond, "30", DoIt)
+	// run hello() every minute, 30 seconds into the minute
+	Run(EveryMinute, OnSecond, "30", hello)
 	
 	Block()
 
