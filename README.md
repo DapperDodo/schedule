@@ -3,9 +3,7 @@
 `run func X every Y at Z`
 
 Schedule is a REALLY REALLY SIMPLE scheduler for automating jobs.
-Simply wrap your job inside a func(){}
-Schedule the runs
-Block until shutdown
+Simply wrap your job inside a func(){}, schedule the runs, block until shutdown.
 
 
 installation:
