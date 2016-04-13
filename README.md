@@ -20,13 +20,19 @@ schedule examples:
 example main.go:
 
 	import (
+		"fmt"
+		
 		"github.com/DapperDodo/schedule"
 	)
 	
 	func main() {
 	
-		schedule.Run(schedule.EveryMinute, schedule.OnSecond, "00", importer.Import)
+		schedule.Run(schedule.EveryMinute, schedule.OnSecond, "00", hello)
 	
 		// start `serving`
 		schedule.Block()
+	}
+	
+	func hello() {
+		fmt.Println("hello world!")
 	}
