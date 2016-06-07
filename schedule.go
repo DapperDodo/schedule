@@ -59,7 +59,5 @@ func Run(periodformat string, momentformat string, moment string, action func())
 }
 
 func Block() {
-	for {
-		time.Sleep(time.Second)
-	}
+	select {}
 }
